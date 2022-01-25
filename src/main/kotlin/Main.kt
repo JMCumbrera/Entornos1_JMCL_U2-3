@@ -1,42 +1,42 @@
 fun main() {
-    var v1: MutableList<Int> = mutableListOf()
-    var v2: MutableList<Int> = mutableListOf()
+    val C1: Int = 5
+    val C2: Int = 4
 
     println("======Primer vector======")
-    println("Introduzca los números que desee añadir: ")
+    println("Introduzca el tamaño del vector v1: ")
+    val n1: Int = readLine()!!.toInt()
+    val a1: Array<Int?> = arrayOfNulls(n1)
     print("\n")
 
-    for (i in 0..4) {
-        println("Número $i: ")
-        var n1: Int = readLine()!!.toInt()
-        v1.add(n1)
+    for (i in 0..a1.size - 1) {
+        a1[i] = (2*i) + C1
     }
 
     print("\n")
     println("======Segundo vector======")
-    println("Introduzca los números que desee añadir: ")
+    println("Introduzca el tamaño del vector v2: ")
+    val n2: Int = readLine()!!.toInt()
+    val a2: Array<Int?> = arrayOfNulls(n2)
     print("\n")
 
-    for (i in 0..3) {
-        println("Número $i: ")
-        var n2: Int = readLine()!!.toInt()
-        v2.add(n2)
+    for (i in 0..a2.size - 1) {
+        a2[i] = (2*i) + C2
     }
 
-    var matriz2d = listOf<MutableList<Int>>(
-        v1,
-        v2
+    val matriz2d = listOf<Array<Int?>>(
+        a1,
+        a2
     )
     
     print("\n")
     println("Aquí tiene su matriz 2d: ")
     print("\n")
 
-    for (i in 0..4) {
+    for (i in 0..a1.size - 1) {
         print("${matriz2d[0][i]} ")
     }
     print("\n")
-    for (j in 0..3) {
+    for (j in 0..a2.size - 1) {
         print("${matriz2d[1][j]} ")
     }
 }
